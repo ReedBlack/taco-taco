@@ -1,31 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="top">
+      <SpinningTaco />
+      <Header />
+      <InputForm class="container"/>
     </div>
-    <router-view/>
+    <main>
+      <router-view/>
+    </main>
+    <Footer />
   </div>
 </template>
 
+<script>
+
+import SpinningTaco from "@/components/SpinningTaco"
+import Header from "@/components/Header"
+import InputForm from "@/components/InputForm"
+
+export default {
+  name: "App",
+  components: {
+    Header,
+    InputForm,
+    SpinningTaco
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+  background-image: url("/Mexican_Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.top{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.container{
+  width: 50%;
+  align-self: center;
 }
 </style>

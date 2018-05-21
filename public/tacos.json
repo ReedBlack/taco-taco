@@ -1,0 +1,54 @@
+{
+  "feeling": [
+
+    {
+      "earthy": {
+        "keywords": ["Mushroom", "truffle"]
+      }
+    },
+    {
+      "spicy": {
+        "keywords": ["spicy", "chorizo", "habanero", "jalepeno"]
+      }
+    },
+    {
+      "fishy": {
+        "keywords": ["fish", "cod", "tilapia", "shrimp", "ceviche", "pesce"]
+      }
+    },
+    {
+      "sexy": {
+        "keywords": ["avocado", "guacamole", "cotija", "pickled onions", "corn"]
+      }
+    },
+    {
+      "beefy": {
+        "keywords": ["beef", "steak", "carne", "carne asada", "chili"]
+      }
+    },
+    {
+      "porked": {
+        "keywords": ["pork", "chorizo", "puerco", "bbq", "barbacoa", "carnitas"]
+      }
+    },
+    {
+      "dangerous": {
+        "keywords": ["lengua", "tripe", "ghost"]
+      }
+    },
+    {
+      "vegged": {
+        "keywords": ["vegetarian", "squash", "vegetable", "veggie", "potatoes"]
+      }
+    }, {
+      "feathered": {
+        "keywords": ["chicken", "turkey"]
+      }
+    },
+    {
+      "baaaa": {
+        "keywords": ["lamb", "goat"]
+      }
+    }
+  ]
+}
