@@ -1,54 +1,38 @@
 {
-  "feeling": [
+  "feelings": [{
+    "feeling": "spicy",
+    "keywords": ["spicy", "chorizo", "habanero", "jalepeno"]
 
-    {
-      "earthy": {
-        "keywords": ["Mushroom", "truffle"]
-      }
-    },
-    {
-      "spicy": {
-        "keywords": ["spicy", "chorizo", "habanero", "jalepeno"]
-      }
-    },
-    {
-      "fishy": {
-        "keywords": ["fish", "cod", "tilapia", "shrimp", "ceviche", "pesce"]
-      }
-    },
-    {
-      "sexy": {
-        "keywords": ["avocado", "guacamole", "cotija", "pickled onions", "corn"]
-      }
-    },
-    {
-      "beefy": {
-        "keywords": ["beef", "steak", "carne", "carne asada", "chili"]
-      }
-    },
-    {
-      "porked": {
-        "keywords": ["pork", "chorizo", "puerco", "bbq", "barbacoa", "carnitas"]
-      }
-    },
-    {
-      "dangerous": {
-        "keywords": ["lengua", "tripe", "ghost"]
-      }
-    },
-    {
-      "vegged": {
-        "keywords": ["vegetarian", "squash", "vegetable", "veggie", "potatoes"]
-      }
-    }, {
-      "feathered": {
-        "keywords": ["chicken", "turkey"]
-      }
-    },
-    {
-      "baaaa": {
-        "keywords": ["lamb", "goat"]
-      }
-    }
-  ]
+  }, {
+    "feeling": "fishy",
+    "keywords": ["fish", "cod", "catfish", "tilapia", "shrimp", "ceviche", "pesce"]
+
+  }, {
+    "feeling": "sexy",
+    "keywords": ["avocado", "guacamole", "cotija", "pickled onions", "corn"]
+
+  }, {
+    "feeling": "beefy",
+    "keywords": ["beef", "steak", "carne", "carne asada", "chili"]
+
+  }, {
+    "feeling": "porked",
+    "keywords": ["pork", "chorizo", "puerco", "bbq", "barbacoa", "carnitas"]
+
+  }, {
+    "feeling": "dangerous",
+    "keywords": ["lengua", "tripe", "ghost"]
+
+  }, {
+    "feeling": "vegged",
+    "keywords": ["vegetarian", "beans", "bean", "lentils", "corn", "rajas", "tofu", "soyrizo", "squash", "vegetable", "veggie", "potatoes"]
+
+  }, {
+    "feeling": "feathered",
+    "keywords": ["chicken", "turkey"]
+
+  }, {
+    "feeling": "baaaa",
+    "keywords": ["lamb", "goat"]
+  }]
 }

@@ -7,8 +7,11 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "showdown": "^1.8.6",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-markdown": "^2.2.4",
+    "vue-router": "^3.0.1",
+    "vue-showdown": "^1.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
