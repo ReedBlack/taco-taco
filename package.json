@@ -1,5 +1,5 @@
 {
-  "name": "vino-stretcho",
+  "name": "taco-taco",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,8 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
     "@vue/cli-service": "^3.0.0-beta.10",
+    "cypress": "^2.1.0",
+    "vue-directive-markdown": "^1.2.1",
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {

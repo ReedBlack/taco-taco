@@ -14,7 +14,12 @@
           <option value="dangerous">dangerous</option>
         </select>
         <br>
-        <button type="submit" name="taco" @click.prevent="getBaseLayer(tacoFeeling)" @click="showRecipe = !showRecipe" >TACO</button>
+        <button type="submit" name="taco" 
+        @click.prevent="getBaseLayer(tacoFeeling); 
+                        getShell()
+                        getCondiment()
+                        getMixin()
+                        ;">TACO</button>
       </form>
     </div>
   </div>
@@ -23,15 +28,27 @@
 <script>
 import Vue from "vue";
 import VueShowdown from "vue-showdown";
+import VueMarkdown from "vue-markdown";
 
 export default {
+  name: "InputForm",
   data() {
-    return {};
+    return {
+      tacoFeeling: ""
+    };
   },
   components: {
-    VueShowdown
+    VueShowdown,
+    VueMarkdown
   },
-  props: ["tacoFeeling", "getCondiment", "showRecipe", "getBaseLayer"]
+  props: [
+    "getTacoParts",
+    "getCondiment",
+    "showRecipe",
+    "getShell",
+    "getBaseLayer",
+    "getMixin"
+  ]
 };
 </script>
 
@@ -45,10 +62,12 @@ export default {
   text-align: center;
   align-items: center;
 }
-form {
+
+.form {
   display: flex;
   flex-direction: column;
 }
+
 select {
   font-family: "Las Locuras del emperador";
   font-size: 30px;
@@ -66,5 +85,12 @@ button {
   border: 5px inset rgb(120, 0, 0);
   width: 70%;
   align-self: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: -9px;
 }
 </style>

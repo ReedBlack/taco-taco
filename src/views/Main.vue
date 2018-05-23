@@ -1,13 +1,19 @@
 <template lang="html">
   <div class="">
-    <InputForm :getBaseLayer="getBaseLayer" />
+    <InputForm :getBaseLayer="getBaseLayer" 
+               :getShell="getShell"
+               :getCondiment="getCondiment"
+               :getMixin="getMixin"
+                />
     <TacoRecipe 
                 
                 :getBaseLayer="getBaseLayer" 
                 :showRecipe="showRecipe"
-                :tacoFeeling="tacoFeeling" 
+                
                 :recipe="recipe" 
-                :getCondiments="getCondiments"
+                :getCondiment="getCondiment"
+                :getMixin="getMixin"
+                :getShell="getShell"
                 :tacoData="tacoData" />
   </div>
 </template>
@@ -29,26 +35,26 @@ export default {
     return {
       API_URL: "/tacos.json",
       showRecipe: true,
-      tacoFeeling: "",
       tacoData: [],
+
       recipe: {
         base_layer: {
-          part: "A Base of ",
+          part: "",
           name: "",
           recipe: ""
         },
         condiment: {
-          part: "Topped with ",
+          part: "",
           name: "",
           recipe: ""
         },
         mixin: {
-          part: "Mixed in with ",
+          part: "",
           name: "",
           recipe: ""
         },
         shell: {
-          part: "and Served on ",
+          part: "",
           name: "",
           recipe: ""
         }
@@ -80,11 +86,11 @@ export default {
       )
     ]).then(res => {
       this.tacoData = res;
-      console.log(this.tacoData);
     });
   },
   methods: {
     getBaseLayer(tacoFeeling) {
+      this.recipe.base_layer.part = `A Base of `;
       const getFeelings = this.tacoData[0].feelings;
       const getBases = this.tacoData[1];
       const feeling = getFeelings.find(feeling => {
@@ -101,7 +107,29 @@ export default {
       this.recipe.base_layer.name =
         matches[Math.floor(Math.random() * matches.length)];
     },
-    getCondiments() {}
+    getShell() {
+      this.recipe.shell.part = `and Served on `;
+      const randomShell = this.tacoData[5][
+        Math.floor(Math.random() * this.tacoData[5].length)
+      ];
+
+      this.recipe.shell.name = randomShell;
+    },
+    getCondiment() {
+      this.recipe.condiment.part = `Topped with `;
+      const randomCondiment = this.tacoData[3][
+        Math.floor(Math.random() * this.tacoData[3].length)
+      ];
+      this.recipe.condiment.name = randomCondiment;
+    },
+    getMixin() {
+      this.recipe.mixin.part = `Tossed with `;
+      const randomMixin = this.tacoData[4][
+        Math.floor(Math.random() * this.tacoData[4].length)
+      ];
+
+      this.recipe.mixin.name = randomMixin;
+    }
   }
 };
 </script>

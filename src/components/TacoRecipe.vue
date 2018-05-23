@@ -3,41 +3,62 @@
     <div class = "taco-title">
       <p class="recipe-title">
       {{recipe.base_layer.part}}
-      <span class="loud base-layer">{{recipe.base_layer.name.name}}</span>,   
+      <span class="loud base-layer">{{recipe.base_layer.name.name}}</span>   
       {{recipe.condiment.part}}
-      <span class ="loud condiment"> {{tacoData[2].condiment.name}}</span>, 
+      <span class ="loud condiment"> {{recipe.condiment.name.name}}</span> 
       {{recipe.mixin.part}}
-      <span class="loud mixin"> {{tacoData[2].mixin.name}} </span>,  
+      <span class="loud mixin"> {{recipe.mixin.name.name}} </span>  
       {{recipe.shell.part}}
-      <span class="loud shell"> {{tacoData[2].shell.name}}</span>.</p>
+      <span class="loud shell"> {{recipe.shell.name.name}}</span></p>
     </div>
     <br>
-    <div>
-      <vue-showdown :markdown="recipe.base_layer.name.recipe" />
-      <p>hi</p>
+    <div class= "recipes">
+      <vue-showdown>{{recipe.base_layer.name.recipe}}</vue-showdown>
+      <vue-markdown>{{recipe.condiment.name.recipe}}</vue-markdown>
+      <p>{{recipe.mixin.name.recipe}}</p>
+      <vue-markdown>{{recipe.shell.name.recipe}}</vue-markdown>
+      
     </div>
   </div>
 </template>
 
 <script>
 import VueShowdown from "vue-showdown";
+import VueMarkdown from "vue-markdown";
 import Vue from "vue";
 
 export default {
-  name: "tacoRecipe",
+  name: "TacoRecipe",
   components: {
-    VueShowdown
+    VueShowdown,
+    VueMarkdown
   },
-  props: ["recipe", "showRecipe", "tacoData", "tacoFeeling", "getBaseLayer"],
-  methods: {}
+  props: [
+    "recipe",
+    "getTacoParts",
+    "showRecipe",
+    "getMixin",
+    "tacoData",
+    "getShell",
+    "getCondiment",
+    "getBaseLayer"
+  ]
 };
 </script>
 
-<style lang="css">
+<style>
 .taco-title {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.6);
   margin: 2%;
+}
+
+.recipes {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: -2%;
+  padding: 2%;
+  max-height: 27em;
+  overflow: scroll;
 }
 
 .recipe-section {
@@ -64,5 +85,9 @@ export default {
 
 .shell {
   color: green;
+}
+
+li {
+  list-style-image: url("/cactus.png");
 }
 </style>
