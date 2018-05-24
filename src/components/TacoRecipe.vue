@@ -12,13 +12,15 @@
       <span class="loud shell"> {{recipe.shell.name.name}}</span></p>
     </div>
     <br>
-    <div class= "recipes">
-      <vue-showdown>{{recipe.base_layer.name.recipe}}</vue-showdown>
-      <vue-markdown>{{recipe.condiment.name.recipe}}</vue-markdown>
-      <p>{{recipe.mixin.name.recipe}}</p>
-      <vue-markdown>{{recipe.shell.name.recipe}}</vue-markdown>
-      
-    </div>
+    
+      <div class="recipes">
+        <p>{{recipe.base_layer.name.recipe}}</p>
+        <p>{{recipe.condiment.name.recipe}}</p>
+        <p>{{recipe.mixin.name.recipe}}</p>
+        <p>{{recipe.shell.name.recipe}}</p>
+        
+      </div>
+    
   </div>
 </template>
 
@@ -57,7 +59,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.4);
   margin: -2%;
   padding: 2%;
-  max-height: 27em;
+  max-height: 29em;
   overflow: scroll;
 }
 

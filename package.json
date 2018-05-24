@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
+    "minimatch": "^3.0.4",
     "showdown": "^1.8.6",
     "vue": "^2.5.16",
     "vue-markdown": "^2.2.4",

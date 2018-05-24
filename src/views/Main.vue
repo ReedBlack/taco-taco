@@ -5,16 +5,18 @@
                :getCondiment="getCondiment"
                :getMixin="getMixin"
                 />
-    <TacoRecipe 
+
+      <TacoRecipe 
                 
-                :getBaseLayer="getBaseLayer" 
-                :showRecipe="showRecipe"
-                
-                :recipe="recipe" 
-                :getCondiment="getCondiment"
-                :getMixin="getMixin"
-                :getShell="getShell"
-                :tacoData="tacoData" />
+                  :getBaseLayer="getBaseLayer" 
+                  :showRecipe="showRecipe"
+                  
+                  :recipe="recipe" 
+                  :getCondiment="getCondiment"
+                  :getMixin="getMixin"
+                  :getShell="getShell"
+                  :tacoData="tacoData" />
+   
   </div>
 </template>
 
@@ -65,23 +67,23 @@ export default {
     Promise.all([
       fetch("/tacos.json").then(res => res.json()),
 
-      fetch("http://taco-randomizer.herokuapp.com/base_layers/").then(res =>
+      fetch("https://taco-randomizer.herokuapp.com/base_layers/").then(res =>
         res.json()
       ),
 
-      fetch("http://taco-randomizer.herokuapp.com/random/").then(res =>
+      fetch("https://taco-randomizer.herokuapp.com/random/").then(res =>
         res.json()
       ),
 
-      fetch("http://taco-randomizer.herokuapp.com/condiments/").then(res =>
+      fetch("https://taco-randomizer.herokuapp.com/condiments/").then(res =>
         res.json()
       ),
 
-      fetch("http://taco-randomizer.herokuapp.com/mixins/").then(res =>
+      fetch("https://taco-randomizer.herokuapp.com/mixins/").then(res =>
         res.json()
       ),
 
-      fetch("http://taco-randomizer.herokuapp.com/shells/").then(res =>
+      fetch("https://taco-randomizer.herokuapp.com/shells/").then(res =>
         res.json()
       )
     ]).then(res => {
@@ -108,7 +110,7 @@ export default {
         matches[Math.floor(Math.random() * matches.length)];
     },
     getShell() {
-      this.recipe.shell.part = `and Served on `;
+      this.recipe.shell.part = `, and Served on `;
       const randomShell = this.tacoData[5][
         Math.floor(Math.random() * this.tacoData[5].length)
       ];
@@ -116,14 +118,14 @@ export default {
       this.recipe.shell.name = randomShell;
     },
     getCondiment() {
-      this.recipe.condiment.part = `Topped with `;
+      this.recipe.condiment.part = `, Topped with `;
       const randomCondiment = this.tacoData[3][
         Math.floor(Math.random() * this.tacoData[3].length)
       ];
       this.recipe.condiment.name = randomCondiment;
     },
     getMixin() {
-      this.recipe.mixin.part = `Tossed with `;
+      this.recipe.mixin.part = `, Tossed with `;
       const randomMixin = this.tacoData[4][
         Math.floor(Math.random() * this.tacoData[4].length)
       ];
