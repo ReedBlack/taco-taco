@@ -1,14 +1,38 @@
 <template lang="html">
-
-  <h1 class="title-taco">¡taco taco!</h1>
-
+  <div classs="about">
+    <button class="button" type="button" @click.prevent="toggleAbout">About</button>
+    <About v-show="displayAbout" />
+    <h1 class="title-taco">¡taco taco!</h1>
+  </div>
 </template>
 
 <script>
-export default {};
+import About from "@/components/About";
+
+export default {
+  name: "Header",
+  components: {
+    About
+  },
+  data() {
+    return {
+      displayAbout: false
+    };
+  },
+  methods: {
+    toggleAbout() {
+      this.displayAbout = !this.displayAbout;
+    }
+  }
+};
 </script>
 
 <style lang="css">
+.button {
+  width: 20%;
+  text-align: center;
+  margin-left: 39%;
+}
 @font-face {
   font-family: "Las Locuras del emperador";
   src: url("/Las Locuras del emperador.TTF");
@@ -30,5 +54,10 @@ h1 {
   text-shadow: 1px 2px #ff0000;
   margin-top: 0px;
   text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
 }
 </style>

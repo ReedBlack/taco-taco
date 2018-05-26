@@ -14,10 +14,18 @@
     <br>
     
       <div class="recipes">
-        <p>{{recipe.base_layer.name.recipe}}</p>
-        <p>{{recipe.condiment.name.recipe}}</p>
-        <p>{{recipe.mixin.name.recipe}}</p>
-        <p>{{recipe.shell.name.recipe}}</p>
+        <p>
+          {{recipe.base_layer.name.recipe}}
+        </p>
+        <p>
+          {{recipe.condiment.name.recipe}}
+        </p>
+        <p>
+          {{recipe.mixin.name.recipe}}
+        </p>
+        <p>
+          {{recipe.shell.name.recipe}}
+        </p>
         
       </div>
     
@@ -57,7 +65,7 @@ export default {
 
 .recipes {
   background-color: rgba(255, 255, 255, 0.4);
-  margin: -2%;
+  margin: 2%;
   padding: 2%;
   max-height: 29em;
   overflow: scroll;

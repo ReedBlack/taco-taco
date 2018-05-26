@@ -23,7 +23,7 @@
 <script>
 import TacoRecipe from "@/components/TacoRecipe.vue";
 import InputForm from "@/components/InputForm.vue";
-import VueShowdown from "vue-showdown";
+import VueMarkdown from "vue-markdown";
 import Vue from "vue";
 
 export default {
@@ -31,7 +31,7 @@ export default {
   components: {
     InputForm,
     TacoRecipe,
-    VueShowdown
+    VueMarkdown
   },
   data() {
     return {
