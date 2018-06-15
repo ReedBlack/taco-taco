@@ -14,18 +14,11 @@
     <br>
     
       <div class="recipes">
-        <p>
-          {{recipe.base_layer.name.recipe}}
-        </p>
-        <p>
-          {{recipe.condiment.name.recipe}}
-        </p>
-        <p>
-          {{recipe.mixin.name.recipe}}
-        </p>
-        <p>
-          {{recipe.shell.name.recipe}}
-        </p>
+        <vue-markdown :source="recipe.base_layer.name.recipe" />
+        <vue-markdown :source="recipe.condiment.name.recipe" />
+        <vue-markdown :source="recipe.mixin.name.recipe" />
+        <vue-markdown :source="recipe.shell.name.recipe" />
+          
         
       </div>
     
@@ -33,14 +26,12 @@
 </template>
 
 <script>
-import VueShowdown from "vue-showdown";
 import VueMarkdown from "vue-markdown";
 import Vue from "vue";
 
 export default {
   name: "TacoRecipe",
   components: {
-    VueShowdown,
     VueMarkdown
   },
   props: [
@@ -67,7 +58,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.4);
   margin: 2%;
   padding: 2%;
-  max-height: 29em;
+  max-height: 26.5em;
   overflow: scroll;
 }
 

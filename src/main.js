@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import VueShowdown from 'vue-showdown'
 import App from './App.vue'
 import router from './router'
 import VueMarkdown from 'vue-markdown';

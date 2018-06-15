@@ -69,16 +69,21 @@ export default {
 }
 
 select {
-  font-family: "Las Locuras del emperador";
-  font-size: 30px;
+  font-family: "Chango", cursive;
+  font-size: 3.6vh;
   background-color: yellow;
 }
 
 option {
   text-align: center;
 }
-button {
+
+button:hover {
   font-size: 3vh;
+}
+
+button {
+  font-size: 2.8vh;
   border-radius: 20%;
   font-family: "Nunito Sans", sans-serif;
   letter-spacing: 0.21vw;

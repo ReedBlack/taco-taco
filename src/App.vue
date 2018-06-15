@@ -14,12 +14,14 @@
 <script>
 import SpinningTaco from "@/components/SpinningTaco";
 import Header from "@/components/Header";
+import VueMarkdown from "vue-markdown";
 
 export default {
   name: "App",
   components: {
     Header,
-    SpinningTaco
+    SpinningTaco,
+    VueMarkdown
   }
 };
 </script>
