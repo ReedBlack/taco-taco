@@ -1,6 +1,6 @@
 # ¡taco taco!
 
-![¡taco taco! gif](https://github.com/ReedBlack/taco-taco/blob/master/public/Taco-taco%20vid.gif)
+![¡taco taco! gif](https://github.com/ReedBlack/taco-taco/blob/master/public/taco-taco.gif)
 
 Harnesses the TacoFancy API to create the greatest random taco recipe generator app the multiverse has ever seen. Your taco night will never be the same. Built with Vue.js
 
